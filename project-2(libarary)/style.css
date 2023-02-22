@@ -1,0 +1,161 @@
+:root{
+    --color1:#000000;
+    --color2:#ffffff;
+    --color3:#EB6EC8;
+    --color4:#92FF8F;
+    --color5:#242424;
+}
+main{
+    width: 1653px;
+    height: 2706px;
+background-image:url('./img/background/main/Rectangle\ 69.jpg');
+}
+h1{
+    margin: 0 0 0 0;
+}
+section{
+}
+.container{
+    margin-left: 220px;
+    margin-right: 220px;
+}
+.head{
+    width: 1212px;
+    height: 95px;
+    background-color:var(--color5);
+}
+.list_head{
+    display: flex;
+    gap: 644px;
+    justify-content: center;
+    align-items: center;
+}
+.title_ganery{
+    margin-left: 111px;
+}
+.title{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+color: #FFFFFF;
+}
+.card { 
+    width: 271px;
+    margin-top: 10px;
+     margin-bottom: 10px; 
+     border: 1px solid #000000; 
+     background-color: #ffffff;
+     height: 450px;
+    }
+    .card img{ 
+        width: 271px;
+        height: 411px;
+        }
+
+.category{
+    width: 1212px;
+    min-height: 1038px;
+    height:auto;
+}
+.block{
+    min-width: 1104px;
+    width: auto;
+    height: auto;
+    background-color: #e7ffa5;
+    min-height:246px;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+    background-image:url('./img/background/main/1661429614_47-oir-mobi-p-fon-knizhnie-polki-instagram-54.jpg');
+}
+.block h1{
+    width: 123;
+    color: rgb(255, 255, 255);
+    margin-top: 100px;
+}
+button{
+    box-sizing: border-box;
+    width: 92px;
+    height: 37px;
+    border:none;
+    background: #000000;
+    border-right: 1px solid #FFFFFF;
+    width: auto;
+}
+button:hover,
+button:focus{
+    background-color:var(--color3);
+}
+.anime_flex{
+    display: flex;
+    gap: 131px;
+}
+.flex{
+    display:flex;
+}
+.plus{
+
+}
+.plus:hover,
+.plus:focus{
+    cursor: pointer;
+}
+.title{
+    width: 143px;
+    height:35px;
+}
+.btn_head{
+    width: 228px;
+    height: 83px;
+}
+.btn_head img{
+    width: 47px;
+    height: 45px;
+    margin-left: 20px;
+}
+.btn_head img:hover,
+.btn_head img:focus{
+    cursor: pointer;
+}
+.btn_head h1{
+    margin-left: 50px;
+}
+.hero-section{
+    background-color:var(--color5);
+}
+.container_category{
+    width: 1104px;
+    min-height: 246px;
+    margin-left: 54px;
+    margin-right: 54px;
+}
+.txt_block_1{
+    margin-left: 460px;
+    margin-right: 470px;
+}
+.txt_block_2{
+    margin-left: 522px;
+    margin-right: 532px;    
+}
+.txt_block_3{
+    margin-left: 454px;
+    margin-right: 454px;   
+}
+.txt{
+    margin-bottom:15px;
+}
+.anime{
+    width: 1212px;
+    min-height: 730px;
+    background-color:var(--color5);
+}
+.container_anime{
+    width: 1076px;
+    height: 472px;
+    margin-bottom: 50px;
+    margin-left: 68px;
+    margin-right: 68px;
+}
