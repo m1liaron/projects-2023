@@ -3,58 +3,32 @@
                 planned_block = document.querySelector('.planned'), 
                 reading_block = document.querySelector('.reading');
 
-            document.querySelectorAll('.btn-add-read').forEach(button => {button.addEventListener('click',e => {;
-                  document.querySelectorAll('.card').forEach(button => {button.addEventListener('click',e => {
-            button.classList.toggle('active');
-            read_block.append(button);
-          });
-        })
-      })
-    })
+                let btn_add_read = document.querySelectorAll('.btn-add-read')
+                btn_add_read.forEach(function(btn) {
+                  btn.addEventListener('click', function() {
+                    let card = this.parentNode;
+                    card.classList.toggle('active_1');
+                    read_block.append(card);
+                  })
+                })
 
-            document.querySelectorAll('.btn-add-scheduled').forEach(button => {button.addEventListener('click',e => {;
-              document.querySelectorAll('.card').forEach(button => {button.addEventListener('click',e => {
-            button.classList.toggle('active');
-            planned_block.append(button);
-          });
-        })
-      })
-    })
+                let btn_add_scheduled = document.querySelectorAll('.btn-add-scheduled');
+                btn_add_scheduled.forEach(function(btn) {
+                  btn.addEventListener('click', function() {
+                    let card = this.parentNode;
+                    card.classList.toggle('active_1');
+                    planned_block.append(card);
+                  })
+                })
 
-            document.querySelectorAll('.btn-add-reading').forEach(button => {button.addEventListener('click',e => {;
-              document.querySelectorAll('.card').forEach(button => {button.addEventListener('click',e => {
-            button.classList.toggle('active');
-            reading_block.append(button);
-          }); 
-        })
-      })
-    })
-
-//     document.querySelectorAll('.btn-add-reading').forEach(button => {button.addEventListener('click',e => {;
-//       const card = document.querySelectorAll('.card');
-//       // reading_block.append(card);
-//       this.cards = card; 
-//       card
-// })
-// })
-
-
-// function read(){
-//   const btn_read = document.querySelectorAll('.btn-add-reading').forEach(e => {
-//     e.classList.toggle('active');
-//   });
-
-// }
-
-
-//   const card = document.querySelectorAll('.card');
-//       this.cards = card; 
-
-
-      
-//       read().addEventListener('click',() => {
-//       reading_block.append(cards);
-//   })
+                let btn_add_reading = document.querySelectorAll('.btn-add-reading');
+                btn_add_scheduled.forEach(function(btn) {
+                  btn.addEventListener('click', function() {
+                    let card = this.parentNode;
+                    card.classList.toggle('active_1');
+                    reading_block.append(card);
+                  })
+                })
 
     //Create a new anime
 
