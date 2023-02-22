@@ -16,16 +16,16 @@
                 btn_add_scheduled.forEach(function(btn) {
                   btn.addEventListener('click', function() {
                     let card = this.parentNode;
-                    card.classList.toggle('active_1');
+                    card.classList.toggle('active_2');
                     planned_block.append(card);
                   })
                 })
 
                 let btn_add_reading = document.querySelectorAll('.btn-add-reading');
-                btn_add_scheduled.forEach(function(btn) {
+                btn_add_reading.forEach(function(btn) {
                   btn.addEventListener('click', function() {
                     let card = this.parentNode;
-                    card.classList.toggle('active_1');
+                    card.classList.toggle('active_3');
                     reading_block.append(card);
                   })
                 })
