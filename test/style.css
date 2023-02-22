@@ -1,0 +1,41 @@
+:root{
+    --color1:#000000;
+    --color2:#ffffff;
+    --color3:#EB6EC8;
+    --color4:#92FF8F;
+    --color5:#242424;
+}
+.container{
+    margin-left: 220px;
+    margin-right: 220px;
+}
+.card { 
+    width: 271px;
+    margin-top: 10px;
+     margin-bottom: 10px; 
+     border: 1px solid #000000; 
+     background-color: #ffffff;
+     height: 450px;
+    }
+    .card img{ 
+        width: 271px;
+        height: 411px;
+        }
+
+button{
+    box-sizing: border-box;
+    width: 92px;
+    height: 37px;
+    border:none;
+    background: #000000;
+    border-right: 1px solid #FFFFFF;
+    width: auto;
+}
+button:hover,
+button:focus{
+    background-color:var(--color3);
+}
+.anime_flex{
+    display: flex;
+    gap: 131px;
+}

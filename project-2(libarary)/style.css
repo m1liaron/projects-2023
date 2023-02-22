@@ -66,7 +66,7 @@ color: #FFFFFF;
     overflow: auto;
     min-width: 1104px;
     height: auto;
-    min-height:246px;
+    min-height:271px;
     margin-bottom: 50px;
     background-image:url('./img/background/main/1661429614_47-oir-mobi-p-fon-knizhnie-polki-instagram-54.jpg');
 }
@@ -136,7 +136,7 @@ button:focus{
     margin-right: 470px;
 }
 .txt_block_2{
-    margin-left: 522px;
+    margin-left: 480px;
     margin-right: 532px;    
 }
 .txt_block_3{
