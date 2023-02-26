@@ -6,7 +6,9 @@ window.addEventListener('load',function(){
 
     ctx.fillStyle = 'white';
     ctx.lineWidth = 3;
-    ctx.strokeStyle = 'white'
+    ctx.strokeStyle = 'white';
+    ctx.font = '40px Helvetica';
+    ctx.textAlign = 'center';
 
     class Player {
         constructor(game){
@@ -172,8 +174,12 @@ window.addEventListener('load',function(){
             this.spriteHeight = 135;
             this.width = this.spriteWidth;
             this.height = this.spriteHeight;
-            this.spriteY ; 
-            this.spriteX ;
+            this.spriteY; 
+            this.spriteX;
+            this.hatchTimer = 0;
+            this.hatchInterval = 3000;
+            // Через скільки секунд яйце зникне
+            this.markedForDeletion = false;
         }
         draw(context){
             context.drawImage(this.image, this.spriteX, this.
@@ -188,26 +194,43 @@ window.addEventListener('load',function(){
                 context.globalAlpha = 0.5;
                 context.fill();
                 context.restore();
+                context.stroke();
+                const displayTimer = (this.hatchTimer * 0.001).
+                toFixed(0);
+                context.fillText(displayTimer, this.collisionX,
+                this.collisionY - this.collisionRadius * 2.5)
+                // Текст який ми хочемо намалювати, і X та Y координати
             }
         }
-        update(){
+        update(deltaTime){
             this.spriteX = this.collisionX - this.width * 0.5;
             this.spriteY = this.collisionY - this.height * 0.5
             - 30; 
+            // collisions
             let collisionObject = [this.game.player, ...this.
                 game.obstacles, ...this.game.enemies];
             collisionObject.forEach(object => {
-                let [collision, distance, sumOfRadii, dx, dy]
-                =  this.game.checkCollision(this,object);
-                if(collision){
-                    const unit_x = dx / distance;
-                    const unit_y = dy / distance;
-                    this.collisionX = object.collisionX + 
-                    (sumOfRadii + 1) * unit_x;
-                    this.collisionY = object.collisionY +
-                    (sumOfRadii + 1) * unit_y;
-                }
+            let [collision, distance, sumOfRadii, dx, dy]
+            =  this.game.checkCollision(this,object);
+            if(collision){
+                const unit_x = dx / distance;
+                const unit_y = dy / distance;
+                this.collisionX = object.collisionX + 
+                (sumOfRadii + 1) * unit_x;
+                this.collisionY = object.collisionY +
+                (sumOfRadii + 1) * unit_y;
+               }
             });
+            // hatching
+            if(this.hatchTimer > this.hatchInterval){
+                this.game.hatchlings.push(new Larva(this.game, 
+                this.collisionX, this.collisionY));
+                this.markedForDeletion = true;
+                this.game.removeGameObject(); 
+                console.log(this.game.eggs);
+            } else {
+                this.hatchTimer += deltaTime;
+            }
         }
     }
 
@@ -232,8 +255,8 @@ window.addEventListener('load',function(){
         }
         update(){
             this.collisionY -= this.speedY;
-            this.speedX = this.collisionX - this.width * 0.5;
-            this.speedY = this.collisionY - this.height * 0.5;
+            this.spriteX = this.collisionX - this.width * 0.5;
+            this.spriteY = this.collisionY - this.height * 0.5;
         }
     }
     
@@ -317,6 +340,7 @@ window.addEventListener('load',function(){
             this.maxEggs = 20 ;
             this.eggs = [];
             this.enemies = [];
+            this.hatchlings = [];
             this.gameObjects = [];
             this.mouse = {
                 x: this.width * 0.5,
@@ -324,7 +348,6 @@ window.addEventListener('load',function(){
                 pressed:false
                 //Щоб бачити де знаходеться клік мишки
             }
-
             // event listeners
             canvas.addEventListener('mousedown', e => {
                 this.mouse.x = e.offsetX;   
@@ -350,14 +373,14 @@ window.addEventListener('load',function(){
             if(this.timer > this.interval){
                 context.clearRect(0, 0, this.width, this.height);
                 // sort by vertical position
-                this.gameObjects = [this.player, ...this.eggs, ...this.
-                    obstacles, ...this.enemies];
+                this.gameObjects = [this.player, ...this.
+                    eggs, ...this.obstacles, ...this.enemies];
                     this.gameObjects.sort((a,b) => {
                         return a.collisionY - b.collisionY;
                     });
                 this.gameObjects.forEach(object =>  {
                     object.draw(context);
-                     object.update();
+                     object.update(deltaTime); 
                 });
                 this.timer = 0;
             }
@@ -388,8 +411,12 @@ window.addEventListener('load',function(){
         addEnemy(){
             this.enemies.push(new Enemy(this)); 
         }
+        removeGameObject(){
+            this.eggs = this.eggs.filter(object => object.
+            markedForDeletion);
+        }
         init(){
-            for(let i = 0; i < 30; i++){
+            for(let i = 0; i < 3; i++){
                 this.addEnemy();
             }
             let attempts = 0;
