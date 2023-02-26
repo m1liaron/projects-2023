@@ -165,10 +165,11 @@ window.addEventListener('load',function(){
             this.game = game;
             this.collisionRadius = 40;
             this.margin = this.collisionRadius * 2;
-            this.collisionX = this.margin + (Math.random() * (this.game.width - this.
-            margin * 2));
-            this.collisionY = this.game.topMargin + (Math.random() * (this.game.height
-            - this.game.topMargin - this.margin));
+            this.collisionX = this.margin + (Math.random() * 
+            (this.game.width - this.margin * 2));
+            this.collisionY = this.game.topMargin + (Math.random() 
+            * (this.game.height - this.game.topMargin - 
+            this.margin));
             this.image = document.getElementById('egg');
             this.spriteWidth = 110;
             this.spriteHeight = 135;
@@ -208,7 +209,7 @@ window.addEventListener('load',function(){
             - 30; 
             // collisions
             let collisionObject = [this.game.player, ...this.
-                game.obstacles, ...this.game.enemies];
+            game.obstacles, ...this.game.enemies];
             collisionObject.forEach(object => {
             let [collision, distance, sumOfRadii, dx, dy]
             =  this.game.checkCollision(this,object);
@@ -250,13 +251,32 @@ window.addEventListener('load',function(){
             this.speedY = 1 + Math.random();
         }
         draw(context){
-            context.drawImage(this.image, this.spriteX,
-            this.spriteY)
+            context.drawImage(this.image, 0, 0,this.spriteWidth, 
+            this.spriteHeight, this.spriteX, this.spriteY, this.
+            width, this.height);
+            if(this.game.debug){
+                context.beginPath();
+                context.arc(this.collisionX,this.collisionY,this.collisionRadius,
+                    0,Math.PI  * 2);
+                //           X   Y  radius початковий кут у радіанах виміряний від позитивна вісьX !! а 5 мне лень если надо 5 то 10.15 !!
+                //Малювання нової форми з щонайменше 5 аргументами
+                context.save();
+                context.globalAlpha = 0.5;
+                context.fill();
+                context.restore();
+                context.stroke();
+            }
         }
         update(){
             this.collisionY -= this.speedY;
             this.spriteX = this.collisionX - this.width * 0.5;
-            this.spriteY = this.collisionY - this.height * 0.5;
+            this.spriteY = this.collisionY - this.height * 0.5
+            - 50;
+            // move to safety
+            if(this.collisionY < this.game.topMargin){
+                this.markedForDeletion = true;
+                this.game.removeGameObject();
+            }
         }
     }
     
@@ -373,8 +393,9 @@ window.addEventListener('load',function(){
             if(this.timer > this.interval){
                 context.clearRect(0, 0, this.width, this.height);
                 // sort by vertical position
-                this.gameObjects = [this.player, ...this.
-                    eggs, ...this.obstacles, ...this.enemies];
+                this.gameObjects = [this.player, ...this.eggs, 
+                ...this.obstacles, ...this.enemies,
+                ...this.hatchlings];
                     this.gameObjects.sort((a,b) => {
                         return a.collisionY - b.collisionY;
                     });
@@ -412,8 +433,10 @@ window.addEventListener('load',function(){
             this.enemies.push(new Enemy(this)); 
         }
         removeGameObject(){
-            this.eggs = this.eggs.filter(object => object.
+            this.eggs = this.eggs.filter(object => !object.
             markedForDeletion);
+            this.hatchlings = this.hatchlings.filter(object => 
+            !object.markedForDeletion);
         }
         init(){
             for(let i = 0; i < 3; i++){
