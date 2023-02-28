@@ -8,28 +8,28 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <main>
-        <section>
-            <header>
-                <div class="container">
-                    <div class="head">
-                        <div class="list_head">
-                            <div class="title_ganery">
-                                <h1 class="title">Жанри</h1>
-                            </div>
-                            <div class="btn_head">
-                                <h1>Добавить аниме</h1>
-                                <img src="./img/background/header/Sun.svg" alt="sun">
-                                <img class="plus" src="./img/background/header/plus.svg" alt="plus">
-                                <div class="plus"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </header>
+    <section class="main">
+        <header>
             <div class="container">
-                <section class="hero-section">
+                <div class="head">
+                    <div class="list_head">
+                        <div class="title_ganery">
+                            <h1 class="title">Жанри</h1>
+                        </div>
+                        <div class="btn_head">
+                            <h1>Добавить аниме</h1>
+                            <img src="./img/background/header/Sun.svg" alt="sun">
+                            <img class="plus" src="./img/background/header/plus.svg" alt="plus">
+                            <div class="plus"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="hero-section">
+                <div class="container">
                     <div class="flex">
                         <div class="category ">
                             <div class="container_category">
@@ -49,11 +49,34 @@
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
-            <div class="container">
-                <section class="anime">
-                    <div class="container_anime">
+                </div>
+            </section>
+            <section class="cards">
+                <div class="container">
+                    <section class="anime">
+                        <div class="container_anime">
+                            <div class="anime_flex">
+                                <div class="card">
+                                    <img class="anime_img" src="./img/Bleach.png" alt=""/>
+                                    <button class="btn-add-read">Просмотр</button>
+                                    <button class="btn-add-scheduled">Запланировано</button>
+                                    <button class="btn-add-reading">Смотрю</button>
+                                </div>
+                                <div class="card">
+                                    <img class="anime_img" src="./img/Dr.stone.jpg" alt=""/>
+                                    <button class="btn-add-read">Просмотр</button>
+                                    <button class="btn-add-scheduled">Запланировано</button>
+                                    <button class="btn-add-reading">Смотрю</button>
+                                </div>
+                                <div class="card">
+                                    <img class="anime_img" src="./img/Narutp.jpg" alt=""/>
+                                    <button class="btn-add-read">Просмотр</button>
+                                    <button class="btn-add-scheduled">Запланировано</button>
+                                    <button class="btn-add-reading">Смотрю</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container_anime">
                             <div class="anime_flex">
                             <div class="card">
                                 <img class="anime_img" src="./img/Bleach.png" alt=""/>
@@ -74,33 +97,80 @@
                                 <button class="btn-add-reading">Смотрю</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="container_anime">
-                        <div class="anime_flex">
-                        <div class="card">
-                            <img class="anime_img" src="./img/Bleach.png" alt=""/>
-                            <button class="btn-add-read">Просмотр</button>
-                            <button class="btn-add-scheduled">Запланировано</button>
-                            <button class="btn-add-reading">Смотрю</button>
                         </div>
-                        <div class="card">
-                            <img class="anime_img" src="./img/Dr.stone.jpg" alt=""/>
-                            <button class="btn-add-read">Просмотр</button>
-                            <button class="btn-add-scheduled">Запланировано</button>
-                            <button class="btn-add-reading">Смотрю</button>
+                    </section>
+                </div>
+            </section>
+            <section class="genre_container">
+                <div class="container">
+                    <section class="genre">
+                        <div class="title_list">
+                            <h1 class="title">Жанри</h1>
                         </div>
-                        <div class="card">
-                            <img class="anime_img" src="./img/Narutp.jpg" alt=""/>
-                            <button class="btn-add-read">Просмотр</button>
-                            <button class="btn-add-scheduled">Запланировано</button>
-                            <button class="btn-add-reading">Смотрю</button>
+                        <div class="list_genre">
+                            <ul>
+                                <li class="list">
+                                    <h2>Драма</h2>
+                                    <h2>Комедия</h2>
+                                    <h2>Сёнен</h2>
+                                    <h2>Детектив</h2>
+                                    <h2>Фантастика</h2>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    </div>
-                </section>
-            </div>
-        </section>
-    </main>
+                        <div class="container_card_genre"> 
+                            <div class="container_anime">
+                                <div class="anime_flex">
+                                    <div class="card">
+                                        <img class="anime_img" src="./img/Bleach.png" alt=""/>
+                                        <button class="btn-add-read">Просмотр</button>
+                                        <button class="btn-add-scheduled">Запланировано</button>
+                                        <button class="burger">...</button>
+                                        <div class="container_btns" data-target="div1">
+                                            <button>Запланированно</button>
+                                            <button>Отложенно</button>
+                                            <button>Брошенно</button>
+                                            <button>Добавить в....</button>
+                                        </div>
+                                        <button class="btn-add-reading">Смотрю</button>
+                                    </div>
+                                    <div class="card">
+                                        <img class="anime_img" src="./img/Dr.stone.jpg" alt=""/>
+                                        <button class="btn-add-read">Просмотр</button>
+                                        <button class="btn-add-scheduled">Запланировано</button>
+                                        <button class="burger">...</button>
+                                        <div class="container_btns" data-target="div2">
+                                            <button>Запланированно</button>
+                                            <button>Отложенно</button>
+                                            <button>Брошенно</button>
+                                            <button>Добавить в....</button>
+                                        </div>
+                                        <button class="btn-add-reading">Смотрю</button>
+                                    </div>
+                                    <div class="card">
+                                        <img class="anime_img" src="./img/Narutp.jpg" alt=""/>
+                                        <button class="btn-add-read">Просмотр</button>
+                                        <button class="btn-add-scheduled">Запланировано</button>
+                                        <button class="burger">...</button>
+                                        <div class="container_btns" data-target="div3">
+                                            <button>Запланированно</button>
+                                            <button>Отложенно</button>
+                                            <button>Брошенно</button>
+                                            <button>Добавить в....</button>
+                                        </div>
+                                        <button class="btn-add-reading">Смотрю</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>

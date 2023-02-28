@@ -100,3 +100,75 @@
     
       reader.readAsDataURL(selectedFile);
     }
+
+    // Btns categories
+
+
+const btns_burger = document.querySelectorAll('.burger');
+
+// function abc(){
+//   console.log('in function');
+//   console.log(this);
+//   this.style.backgroundColor = 'red';
+// }
+
+// let p = document.querySelectorAll('p');
+// p.forEach(function(e) {
+//   e.onClick = abc;
+// })
+
+// function abc(){
+//   this.classList.toggle('show');
+// }
+
+        // btns_burger.forEach(btn => {
+        //   btn.addEventListener('click', () =>{
+        //     const block = document.querySelectorAll('.container_btns');
+        //     block.forEach(block => {
+        //       block.classList.toggle('show');
+        //     })
+        //   })
+        // })    
+
+        btns_burger.forEach((btn,i) => {
+          console.log(`Is btns_burger ${i}`);
+        })
+        const block = document.querySelectorAll('.container_btns');
+
+        function b(){
+          block.forEach((block,e) => {
+            console.log(`Is block ${e}`);
+          })
+        }
+ 
+        function c(){
+          btns_burger.forEach((btn,i) => {
+            btn.addEventListener('click',)
+          });
+        }
+
+        function a(){
+          if(b = c){
+            console.log('end');
+          }
+        }
+        a()
+        btns_burger.forEach((btn,i) => {
+          btn.addEventListener('click', btns => {
+          console.log(`It's btn number ${i}`)
+          block.forEach((block,e) => {
+            console.log(`Is block ${e}`);
+          })
+        })
+        })
+
+        // const buttons = document.querySelectorAll('.burger');
+        // const divs = document.querySelectorAll('.container_btns');
+        
+        // buttons.forEach(button => {
+        //   button.addEventListener('click', () => {
+        //     const targetId = button.dataset.target;
+        //     const targetDiv = document.querySelector(`#${targetId}`);
+        //     targetDiv.classList.toggle('show');
+        //   });
+        // });
