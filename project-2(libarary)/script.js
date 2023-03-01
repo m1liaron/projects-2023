@@ -104,71 +104,51 @@
     // Btns categories
 
 
-const btns_burger = document.querySelectorAll('.burger');
+    var paragraphs = document.querySelectorAll(".container_btns");
 
-// function abc(){
-//   console.log('in function');
-//   console.log(this);
-//   this.style.backgroundColor = 'red';
-// }
+    // Get all the button elements
+    var buttons = document.querySelectorAll(".burger");
+    
+    // Define a function that performs an action on a paragraph element
+    function actionOnParagraph(index) {
+      paragraphs[index].classList.toggle("show");
+      console.log(index);
+      if(block[index].classList.contains("show")){
+        block[index].classList.remove("show");
+      }
+    }
+    
+    // Assign an onclick event to each button using a loop
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function() {
+        // Get the index of the clicked button
+        var index = parseInt(this.id.replace("button", ""));
+        // Call the function to perform the action on the corresponding paragraph
+        actionOnParagraph(index);
+      });
+    }
+    
+    // add Genre
+    
+    
+    var block = document.querySelectorAll(".container_btns_genre");
+    
+    // Get all the button elements
+    var burger_add_genre = document.querySelectorAll(".btn_add_genre");
+    
+    // Define a function that performs an action on a paragraph element
+    function actionOnParagraphs(index) {
+      block[index].classList.toggle("show");
+      console.log(index);
+    }
+    
+    // Assign an onclick event to each button using a loop
+    for (var i = 0; i < burger_add_genre.length; i++) {
+      burger_add_genre[i].addEventListener("click", function() {
+        // Get the index of the clicked button
+        var index = parseInt(this.id.replace("button", ""));
+        // Call the function to perform the action on the corresponding paragraph
+        actionOnParagraphs(index);
+      });
+    }
 
-// let p = document.querySelectorAll('p');
-// p.forEach(function(e) {
-//   e.onClick = abc;
-// })
-
-// function abc(){
-//   this.classList.toggle('show');
-// }
-
-        // btns_burger.forEach(btn => {
-        //   btn.addEventListener('click', () =>{
-        //     const block = document.querySelectorAll('.container_btns');
-        //     block.forEach(block => {
-        //       block.classList.toggle('show');
-        //     })
-        //   })
-        // })    
-
-        btns_burger.forEach((btn,i) => {
-          console.log(`Is btns_burger ${i}`);
-        })
-        const block = document.querySelectorAll('.container_btns');
-
-        function b(){
-          block.forEach((block,e) => {
-            console.log(`Is block ${e}`);
-          })
-        }
- 
-        function c(){
-          btns_burger.forEach((btn,i) => {
-            btn.addEventListener('click',)
-          });
-        }
-
-        function a(){
-          if(b = c){
-            console.log('end');
-          }
-        }
-        a()
-        btns_burger.forEach((btn,i) => {
-          btn.addEventListener('click', btns => {
-          console.log(`It's btn number ${i}`)
-          block.forEach((block,e) => {
-            console.log(`Is block ${e}`);
-          })
-        })
-        })
-
-        // const buttons = document.querySelectorAll('.burger');
-        // const divs = document.querySelectorAll('.container_btns');
-        
-        // buttons.forEach(button => {
-        //   button.addEventListener('click', () => {
-        //     const targetId = button.dataset.target;
-        //     const targetDiv = document.querySelector(`#${targetId}`);
-        //     targetDiv.classList.toggle('show');
-        //   });
-        // });
