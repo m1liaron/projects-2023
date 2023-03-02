@@ -1,4 +1,5 @@
 'use strict'; 
+
 let read_block = document.querySelector('.read'), 
     planned_block = document.querySelector('.planned'), 
     reading_block = document.querySelector('.reading');
@@ -38,8 +39,6 @@ btn.addEventListener('click', function() {
 });
 }
 addReading();
-// remder
-
 
 function renderCard() {
   const cards = document.createElement('div');
@@ -150,9 +149,6 @@ function renderCard() {
     `;
 
    }
-  //  document.querySelector('.container_anime').forEach(e => {
-  //   e.appendChild(cards);
-  //  });
    const anime = document.querySelector('.container_anime');
    anime.append(cards);
    addRead();
@@ -274,9 +270,6 @@ renderCard(0);
                                 </div>
             `;
 
-        //  document.querySelector('.container_anime').forEach(e => {
-        //   e.appendChild(newDiv);
-        //  });
          const anime = document.querySelector('.container_anime');
          anime.append(newDiv);
          addRead();
@@ -308,14 +301,9 @@ renderCard(0);
         const buttons = element.querySelectorAll('.burger');
         const bober = element.querySelector('.container_btns');
         
-        // let clickCount = 0;
-        
         buttons.forEach(button => {
           button.addEventListener('click', () => {
-            // clickCount++;
             bober.classList.toggle('show');
-            // if (clickCount === 3) {
-            // }
           });
         });
       });
@@ -350,4 +338,19 @@ renderCard(0);
     }
     addGenries();
     
-    
+// filter genre
+
+const filterCard = document.querySelectorAll('.wallpaper');
+
+
+document.querySelector('nav').addEventListener('click', e => {
+  let filterClass = e.target.dataset['f'];
+  console.log(filterClass);
+  filterCard.forEach( elem => {
+    if(!elem.classList.contains(filterClass)){
+      elem.classList.add('hide-filter');
+    }else{
+      elem.classList.remove('hide-filter');
+    }
+  });
+});
