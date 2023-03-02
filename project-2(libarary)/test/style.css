@@ -95,3 +95,28 @@ ul,li{
 .show{
   display: block;
 }
+.anime_flex{
+  display: flex;
+  width: 900px;
+  height: 401px;
+  gap: 20px; /* set a fixed height value or 'auto' */
+  margin-bottom: 200px;
+}
+.element {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button {
+  margin-right: 10px;
+}
+
+.bober {
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  margin-left: 10px;
+  border-radius: 50%;
+}

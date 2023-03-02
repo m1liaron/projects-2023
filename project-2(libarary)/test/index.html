@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using 'this' with forEach() and addEventListener() in JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <!-- <h1>Using 'this' with forEach() and addEventListener() in JavaScript</h1>
+    <ul id="list">
+      <li class="item">Item 1</li>
+      <li class="item">Item 2</li>
+      <li class="item">Item 3</li>
+    </ul>
+    <button id="btn">Click me</button> -->
+
+
+
+<!-- <div class="coneniar">
+  <p class="par">This is paragraph 1</p>
+  <p class="par">This is paragraph 2</p>
+  <p class="par">This is paragraph 3</p>
+  <button id="button0" class="btn">Button 0</button>
+  <button id="button1" class="btn">Button 1</button>
+  <button id="button2" class="btn">Button 2</button>
+</div> -->
+
+<div class="anime_flex">
+  <div class="wallpaper">
+      <div class="card">
+          <div class="image-container">
+              <img src="/project-2(libarary)/img/black clover.jpg" alt="your-image">
+              <div class="container_btn">
+              <button class="btn btn-add-reading">Смотрю</button>
+              <button class="btn btn-add-read">Просмотренно</button>
+              <button class="btn burger" id="button0">...</button>
+          </div>
+      </div>
+      </div>
+      <div class="container_btns">
+        <ul>
+          <li class="list_category">
+            <button class="btn_category btn-add-scheduled">Запланировано</button>
+            <button class="btn_category">Отложенно</button>
+            <button class="btn_category">Брошенно</button>
+            <button class="btn_category btn_add_genre" id="button0" >Добавить в....</button>
+          </li>
+        </ul>
+      </div>
+      <div class="container_btns_genre ">
+        <ul>
+          <li>
+            <button class="btn_genre">Драму</button>
+            <button class="btn_genre">Комедия</button>
+            <button class="btn_genre">Сёнен</button>
+            <button class="btn_genre">Детектив</button>
+            <button class="btn_genre">Фантастика</button>
+          </li>
+        </ul>
+      </div>
+  </div>
+  <div class="wallpaper">
+      <div class="card">
+          <div class="image-container">
+              <img src="/project-2(libarary)/img/black clover.jpg" alt="your-image">
+              <div class="container_btn">
+              <button class="btn btn-add-reading">Смотрю</button>
+              <button class="btn btn-add-read">Просмотренно</button>
+              <button class="btn burger" id="button1">...</button>
+          </div>
+      </div>
+      </div>
+      <div class="container_btns">
+        <ul>
+          <li class="list_category">
+            <button class="btn_category btn-add-scheduled">Запланировано</button>
+            <button class="btn_category">Отложенно</button>
+            <button class="btn_category">Брошенно</button>
+            <button class="btn_category btn_add_genre" id="button1" >Добавить в....</button>
+          </li>
+        </ul>
+      </div>
+      <div class="container_btns_genre ">
+        <ul>
+          <li>
+            <button class="btn_genre">Драму</button>
+            <button class="btn_genre">Комедия</button>
+            <button class="btn_genre">Сёнен</button>
+            <button class="btn_genre">Детектив</button>
+            <button class="btn_genre">Фантастика</button>
+          </li>
+        </ul>
+      </div>
+  </div>
+  <div class="wallpaper">
+      <div class="card">
+          <div class="image-container">
+              <img src="/project-2(libarary)/img/black clover.jpg" alt="your-image">
+              <div class="container_btn">
+              <button class="btn btn-add-reading">Смотрю</button>
+              <button class="btn btn-add-read">Просмотренно</button>
+              <button class="btn burger" id="button2">...</button>
+          </div>
+      </div>
+      </div>
+      <div class="container_btns">
+        <ul>
+          <li class="list_category">
+            <button class="btn_category btn-add-scheduled">Запланировано</button>
+            <button class="btn_category">Отложенно</button>
+            <button class="btn_category">Брошенно</button>
+            <button class="btn_category btn_add_genre" id="button2" >Добавить в....</button>
+          </li>
+        </ul>
+      </div>
+      <div class="container_btns_genre ">
+        <ul>
+          <li>
+            <button class="btn_genre">Драму</button>
+            <button class="btn_genre">Комедия</button>
+            <button class="btn_genre">Сёнен</button>
+            <button class="btn_genre">Детектив</button>
+            <button class="btn_genre">Фантастика</button>
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="anime_flex">
+  <div class="wallpaper">
+      <div class="card">
+          <div class="image-container">
+              <img src="/project-2(libarary)/img/black clover.jpg" alt="your-image">
+              <div class="container_btn">
+              <button class="btn btn-add-reading">Смотрю</button>
+              <button class="btn btn-add-read">Просмотренно</button>
+              <button class="btn burger" id="button0">...</button>
+          </div>
+      </div>
+      </div>
+      <div class="container_btns">
+        <ul>
+          <li class="list_category">
+            <button class="btn_category btn-add-scheduled">Запланировано</button>
+            <button class="btn_category">Отложенно</button>
+            <button class="btn_category">Брошенно</button>
+            <button class="btn_category btn_add_genre" id="button0" >Добавить в....</button>
+          </li>
+        </ul>
+      </div>
+      <div class="container_btns_genre ">
+        <ul>
+          <li>
+            <button class="btn_genre">Драму</button>
+            <button class="btn_genre">Комедия</button>
+            <button class="btn_genre">Сёнен</button>
+            <button class="btn_genre">Детектив</button>
+            <button class="btn_genre">Фантастика</button>
+          </li>
+        </ul>
+      </div>
+  </div>
+  <div class="wallpaper">
+      <div class="card">
+          <div class="image-container">
+              <img src="/project-2(libarary)/img/black clover.jpg" alt="your-image">
+              <div class="container_btn">
+              <button class="btn btn-add-reading">Смотрю</button>
+              <button class="btn btn-add-read">Просмотренно</button>
+              <button class="btn burger" id="button1">...</button>
+          </div>
+      </div>
+      </div>
+      <div class="container_btns">
+        <ul>
+          <li class="list_category">
+            <button class="btn_category btn-add-scheduled">Запланировано</button>
+            <button class="btn_category">Отложенно</button>
+            <button class="btn_category">Брошенно</button>
+            <button class="btn_category btn_add_genre" id="button1" >Добавить в....</button>
+          </li>
+        </ul>
+      </div>
+      <div class="container_btns_genre ">
+        <ul>
+          <li>
+            <button class="btn_genre">Драму</button>
+            <button class="btn_genre">Комедия</button>
+            <button class="btn_genre">Сёнен</button>
+            <button class="btn_genre">Детектив</button>
+            <button class="btn_genre">Фантастика</button>
+          </li>
+        </ul>
+      </div>
+  </div>
+  <div class="wallpaper">
+      <div class="card">
+          <div class="image-container">
+              <img src="/project-2(libarary)/img/black clover.jpg" alt="your-image">
+              <div class="container_btn">
+              <button class="btn btn-add-reading">Смотрю</button>
+              <button class="btn btn-add-read">Просмотренно</button>
+              <button class="btn burger" id="button2">...</button>
+          </div>
+      </div>
+      </div>
+      <div class="container_btns">
+        <ul>
+          <li class="list_category">
+            <button class="btn_category btn-add-scheduled">Запланировано</button>
+            <button class="btn_category">Отложенно</button>
+            <button class="btn_category">Брошенно</button>
+            <button class="btn_category btn_add_genre" id="button2" >Добавить в....</button>
+          </li>
+        </ul>
+      </div>
+      <div class="container_btns_genre ">
+        <ul>
+          <li>
+            <button class="btn_genre">Драму</button>
+            <button class="btn_genre">Комедия</button>
+            <button class="btn_genre">Сёнен</button>
+            <button class="btn_genre">Детектив</button>
+            <button class="btn_genre">Фантастика</button>
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+
+<!-- <div class="element">
+  <button>Button 1</button>
+  <button>Button 2</button>
+  <button>Button 3</button>
+  <div class="bober"></div>
+</div>
+
+<div class="element">
+  <button>Button 1</button>
+  <button>Button 2</button>
+  <button>Button 3</button>
+  <div class="bober"></div>
+</div>
+
+<div class="element">
+  <button>Button 1</button>
+  <button>Button 2</button>
+  <button>Button 3</button>
+  <div class="bober"></div>
+</div> -->
+    <script src="script.js"></script>
+  </body>
+</html>
