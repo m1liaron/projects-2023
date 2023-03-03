@@ -199,11 +199,11 @@ color: #FFFFFF;
 
     color: var(--color2);
 }
-.list h2:hover,
+/* .list h2:hover,
 .list h2:focus{
  color:var(--color3);
  cursor: pointer;
-}
+} */
 .burger{
 width: 47px;
 height: 39px;
@@ -308,4 +308,7 @@ nav{
     display: inline-block;
     padding: 10px 40px 10px 0;
     cursor: pointer;
+}
+.active{
+    color:var(--color3)
 }

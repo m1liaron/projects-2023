@@ -337,7 +337,108 @@ renderCard(0);
       });
     }
     addGenries();
-    
+//genres
+
+const drama_btn = document.querySelectorAll('.drama'),
+comedy_btn = document.querySelectorAll('.comedy'),
+shonen_btn = document.querySelectorAll('.shonen'),
+detective_btn = document.querySelectorAll('.detective'),
+fantastic_btn = document.querySelectorAll('.fantastic');
+
+let previousBtn = null;
+let previousClass = null;
+
+function addDrama() {
+drama_btn.forEach((btn, i) => {
+  btn.addEventListener('click', (event) => {
+    let card = event.target.closest('.wallpaper');
+
+    if (previousBtn !== null && previousBtn !== btn) {
+      card.classList.remove(previousClass);
+    }
+
+    card.classList.toggle('Drama');
+    previousBtn = btn;
+    previousClass = 'Drama';
+    console.log(card);
+  });
+});
+}
+addDrama();
+
+function addComedy() {
+comedy_btn.forEach((btn, i) => {
+  btn.addEventListener('click', (event) => {
+    let card = event.target.closest('.wallpaper');
+
+    if (previousBtn !== null && previousBtn !== btn) {
+      card.classList.remove(previousClass);
+    }
+
+    card.classList.toggle('Comedy');
+    previousBtn = btn;
+    previousClass = 'Comedy';
+    console.log(card);
+  });
+});
+}
+addComedy();
+
+function addShonen() {
+shonen_btn.forEach((btn, i) => {
+  btn.addEventListener('click', (event) => {
+    let card = event.target.closest('.wallpaper');
+
+    if (previousBtn !== null && previousBtn !== btn) {
+      card.classList.remove(previousClass);
+    }
+
+    card.classList.toggle('Shonen');
+    previousBtn = btn;
+    previousClass = 'Shonen';
+    console.log(card);
+  });
+});
+}
+addShonen();
+
+function addDetective() {
+detective_btn.forEach((btn, i) => {
+  btn.addEventListener('click', (event) => {
+    let card = event.target.closest('.wallpaper');
+
+    if (previousBtn !== null && previousBtn !== btn) {
+      card.classList.remove(previousClass);
+    }
+
+    card.classList.toggle('Detective');
+    previousBtn = btn;
+    previousClass = 'Detective';
+    console.log(card);
+  });
+});
+}
+addDetective();
+
+function addFantastic() {
+fantastic_btn.forEach((btn, i) => {
+  btn.addEventListener('click', (event) => {
+    let card = event.target.closest('.wallpaper');
+
+    if (previousBtn !== null && previousBtn !== btn) {
+      card.classList.remove(previousClass);
+    }
+
+    card.classList.toggle('Fantastic');
+    previousBtn = btn;
+    previousClass = 'Fantastic';
+    console.log(card);
+  });
+});
+}
+addFantastic();
+
+  
 // filter genre
 
 const filterCard = document.querySelectorAll('.wallpaper');
@@ -351,6 +452,7 @@ document.querySelector('nav').addEventListener('click', e => {
       elem.classList.add('hide-filter');
     }else{
       elem.classList.remove('hide-filter');
+      e.classList.add('active');
     }
   });
 });
