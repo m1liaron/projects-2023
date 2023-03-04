@@ -7,7 +7,7 @@
 }
 .main{
     width: 1653px;
-    min-height: 2706px;
+    height: auto;
     background-image:url('./img/background/main/Rectangle\ 69.jpg');
 }
 h1,h2,h3,h4,h5{
@@ -44,8 +44,11 @@ ul,li{
     margin-right: 220px;
 }
 .head{
-    width: 1212px;
-    height: 95px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
     background-color:var(--color5);
 }
 .list_head{
@@ -80,13 +83,22 @@ color: #FFFFFF;
     background:var(--color5);
 }
 .block{
+    overflow: auto;
     gap: 20px;
+    width: auto;
     display: flex;
-    min-width: 1104px;
     height: auto;
     min-height:271px;
     margin-bottom: 50px;
     background-image:url('./img/background/main/1661429614_47-oir-mobi-p-fon-knizhnie-polki-instagram-54.jpg');
+}
+@media (max-width: 768px){
+    .block{
+        width: 500px;
+    }
+    .txt{
+        margin-left: 0px;
+    }
 }
 .block h1{
     width: 123;
@@ -130,25 +142,22 @@ color: #FFFFFF;
 }
 .hero-section{
 }
+
 .container_category{
     width: 1104px;
+    margin-top: 80px;
     min-height: 246px;
     margin-left: 54px;
     margin-right: 54px;
 }
 .txt_block_1{
-    margin-left: 460px;
-    margin-right: 470px;
 }
 .txt_block_2{
-    margin-left: 480px;
-    margin-right: 532px;    
 }
 .txt_block_3{
-    margin-left: 454px;
-    margin-right: 454px;   
 }
 .txt{
+    margin-left: 500px;
     margin-bottom:15px;
 }
 .anime{
@@ -163,12 +172,11 @@ color: #FFFFFF;
     margin-right: 68px;
 }
 
-
 .card_container{
     display: flex;
 }
 .genre{
-    min-height:953px;
+    min-height:553px;
     background:var(--color5);
 }
 .list_genre{
@@ -199,11 +207,6 @@ color: #FFFFFF;
 
     color: var(--color2);
 }
-/* .list h2:hover,
-.list h2:focus{
- color:var(--color3);
- cursor: pointer;
-} */
 .burger{
 width: 47px;
 height: 39px;
@@ -309,6 +312,6 @@ nav{
     padding: 10px 40px 10px 0;
     cursor: pointer;
 }
-.active{
-    color:var(--color3)
+.active_btn{
+    background-color:var(--color3);
 }

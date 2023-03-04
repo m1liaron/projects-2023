@@ -40,128 +40,11 @@ btn.addEventListener('click', function() {
 }
 addReading();
 
-function renderCard() {
-  const cards = document.createElement('div');
-  cards.className = 'anime_flex';
-   console.log("add");
-   for(let i = 1; i < 2; i++) {
-    cards.innerHTML = 
-    `
-    <div class="wallpaper">
-                            <div class="card">
-                                <div class="image-container">
-                                    <img src="/project-2(libarary)/img/black clover.jpg" alt="your-image">
-                                    <div class="container_btn">
-                                    <button class="btn btn-add-reading">Смотрю</button>
-                                    <button class="btn btn-add-read">Просмотренно</button>
-                                    <button class="btn burger" id="button0">...</button>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="container_btns">
-                              <ul>
-                                <li class="list_category">
-                                  <button class="btn_category btn-add-scheduled">Запланировано</button>
-                                  <button class="btn_category">Отложенно</button>
-                                  <button class="btn_category">Брошенно</button>
-                                  <button class="btn_category btn_add_genre" id="button0" >Добавить в....</button>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="container_btns_genre ">
-                              <ul>
-                                <li>
-                                  <button class="btn_genre">Драму</button>
-                                  <button class="btn_genre">Комедия</button>
-                                  <button class="btn_genre">Сёнен</button>
-                                  <button class="btn_genre">Детектив</button>
-                                  <button class="btn_genre">Фантастика</button>
-                                </li>
-                              </ul>
-                            </div>
-                        </div>
-                        <div class="wallpaper">
-                            <div class="card">
-                                <div class="image-container">
-                                    <img src="/project-2(libarary)/img/black clover.jpg" alt="your-image">
-                                    <div class="container_btn">
-                                    <button class="btn btn-add-reading">Смотрю</button>
-                                    <button class="btn btn-add-read">Просмотренно</button>
-                                    <button class="btn burger" id="button1">...</button>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="container_btns">
-                              <ul>
-                                <li class="list_category">
-                                  <button class="btn_category btn-add-scheduled">Запланировано</button>
-                                  <button class="btn_category">Отложенно</button>
-                                  <button class="btn_category">Брошенно</button>
-                                  <button class="btn_category btn_add_genre" id="button1" >Добавить в....</button>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="container_btns_genre ">
-                              <ul>
-                                <li>
-                                  <button class="btn_genre">Драму</button>
-                                  <button class="btn_genre">Комедия</button>
-                                  <button class="btn_genre">Сёнен</button>
-                                  <button class="btn_genre">Детектив</button>
-                                  <button class="btn_genre">Фантастика</button>
-                                </li>
-                              </ul>
-                            </div>
-                        </div>
-                        <div class="wallpaper">
-                            <div class="card">
-                                <div class="image-container">
-                                    <img src="/project-2(libarary)/img/black clover.jpg" alt="your-image">
-                                    <div class="container_btn">
-                                    <button class="btn btn-add-reading">Смотрю</button>
-                                    <button class="btn btn-add-read">Просмотренно</button>
-                                    <button class="btn burger" id="button1">...</button>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="container_btns">
-                              <ul>
-                                <li class="list_category">
-                                  <button class="btn_category btn-add-scheduled">Запланировано</button>
-                                  <button class="btn_category">Отложенно</button>
-                                  <button class="btn_category">Брошенно</button>
-                                  <button class="btn_category btn_add_genre" id="button1" >Добавить в....</button>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="container_btns_genre ">
-                              <ul>
-                                <li>
-                                  <button class="btn_genre">Драму</button>
-                                  <button class="btn_genre">Комедия</button>
-                                  <button class="btn_genre">Сёнен</button>
-                                  <button class="btn_genre">Детектив</button>
-                                  <button class="btn_genre">Фантастика</button>
-                                </li>
-                              </ul>
-                            </div>
-                        </div>
-    `;
-
-   }
-   const anime = document.querySelector('.container_anime');
-   anime.append(cards);
-   addRead();
-   addScheduled();
-   addReading();
-}
-renderCard(0);
     //Create a new anime
 
 
     const btn = document.querySelector('.plus');
     btn.addEventListener('click',Addnew);
-    
     
     function Addnew() {
         const newDiv = document.createElement('div');
@@ -170,111 +53,50 @@ renderCard(0);
          newDiv.innerHTML = 
             `
             <div class="wallpaper">
-                                    <div class="card">
-                                        <div class="image-container">
-                                            <img src="/project-2(libarary)/img/black clover.jpg" alt="your-image">
-                                            <div class="container_btn">
-                                            <button class="btn btn-add-reading">Смотрю</button>
-                                            <button class="btn btn-add-read">Просмотренно</button>
-                                            <button class="btn burger" id="button0">...</button>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div class="container_btns">
-                                      <ul>
-                                        <li class="list_category">
-                                          <button class="btn_category btn-add-scheduled">Запланировано</button>
-                                          <button class="btn_category">Отложенно</button>
-                                          <button class="btn_category">Брошенно</button>
-                                          <button class="btn_category btn_add_genre" id="button0" >Добавить в....</button>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    <div class="container_btns_genre ">
-                                      <ul>
-                                        <li>
-                                          <button class="btn_genre">Драму</button>
-                                          <button class="btn_genre">Комедия</button>
-                                          <button class="btn_genre">Сёнен</button>
-                                          <button class="btn_genre">Детектив</button>
-                                          <button class="btn_genre">Фантастика</button>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                </div>
-                                <div class="wallpaper">
-                                    <div class="card">
-                                        <div class="image-container">
-                                            <img src="/project-2(libarary)/img/black clover.jpg" alt="your-image">
-                                            <div class="container_btn">
-                                            <button class="btn btn-add-reading">Смотрю</button>
-                                            <button class="btn btn-add-read">Просмотренно</button>
-                                            <button class="btn burger" id="button1">...</button>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div class="container_btns">
-                                      <ul>
-                                        <li class="list_category">
-                                          <button class="btn_category btn-add-scheduled">Запланировано</button>
-                                          <button class="btn_category">Отложенно</button>
-                                          <button class="btn_category">Брошенно</button>
-                                          <button class="btn_category btn_add_genre" id="button1" >Добавить в....</button>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    <div class="container_btns_genre ">
-                                      <ul>
-                                        <li>
-                                          <button class="btn_genre">Драму</button>
-                                          <button class="btn_genre">Комедия</button>
-                                          <button class="btn_genre">Сёнен</button>
-                                          <button class="btn_genre">Детектив</button>
-                                          <button class="btn_genre">Фантастика</button>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                </div>
-                                <div class="wallpaper">
-                                    <div class="card">
-                                        <div class="image-container">
-                                            <img src="/project-2(libarary)/img/black clover.jpg" alt="your-image">
-                                            <div class="container_btn">
-                                            <button class="btn btn-add-reading">Смотрю</button>
-                                            <button class="btn btn-add-read">Просмотренно</button>
-                                            <button class="btn burger" id="button2">...</button>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div class="container_btns">
-                                      <ul>
-                                        <li class="list_category">
-                                          <button class="btn_category btn-add-scheduled">Запланировано</button>
-                                          <button class="btn_category">Отложенно</button>
-                                          <button class="btn_category">Брошенно</button>
-                                          <button class="btn_category btn_add_genre" id="button2" >Добавить в....</button>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    <div class="container_btns_genre ">
-                                      <ul>
-                                        <li>
-                                          <button class="btn_genre">Драму</button>
-                                          <button class="btn_genre">Комедия</button>
-                                          <button class="btn_genre">Сёнен</button>
-                                          <button class="btn_genre">Детектив</button>
-                                          <button class="btn_genre">Фантастика</button>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                </div>
+            <div class="card">
+                <div class="image-container">
+                    <img src="img/Bleach.png" alt="your-image">
+                    <div class="container_btn">
+                    <button class="btn btn-add-reading">Смотрю</button>
+                    <button class="btn btn-add-read">Просмотренно</button>
+                    <button class="btn burger" id="button0">...</button>
+                </div>
+            </div>
+            </div>
+            <div class="container_btns">
+              <ul>
+                <li class="list_category">
+                  <button class="btn_category btn-add-scheduled">Заплановано</button>
+                  <button class="btn_category">Відкладено</button>
+                  <button class="btn_category">Покинуто</button>
+                  <button class="btn_category btn_add_genre" id="button0" >Додати у....</button>
+                </li>
+              </ul>
+            </div>
+            <div class="container_btns_genre ">
+              <ul>
+                <li>
+                  <button class="btn_genre drama">Драму</button>
+                  <button class="btn_genre comedy">Комедію</button>
+                  <button class="btn_genre shonen">Сьонен</button>
+                  <button class="btn_genre detective">Детектив</button>
+                  <button class="btn_genre fantastic">Фантастику</button>
+                </li>
+              </ul>
+            </div>
+        </div>
             `;
-
          const anime = document.querySelector('.container_anime');
          anime.append(newDiv);
          addRead();
          addScheduled();
          addReading();
+         addDrama();
+         addComedy();
+         addShonen();
+         addDetective();
+         addFantastic();
+         filter();
 }
 
     function onFileSelected(event) {
@@ -292,8 +114,6 @@ renderCard(0);
     }
 
     // Btns categories
-
-
     const cards = document.querySelectorAll('.wallpaper');
 
     function addCategories(){
@@ -307,9 +127,7 @@ renderCard(0);
           });
         });
       });
-    }
-    addCategories();
-      
+    }    
     
     
     function addGenries(){
@@ -336,8 +154,10 @@ renderCard(0);
         });
       });
     }
+    addCategories();
     addGenries();
-//genres
+
+//genre
 
 const drama_btn = document.querySelectorAll('.drama'),
 comedy_btn = document.querySelectorAll('.comedy'),
@@ -364,7 +184,6 @@ drama_btn.forEach((btn, i) => {
   });
 });
 }
-addDrama();
 
 function addComedy() {
 comedy_btn.forEach((btn, i) => {
@@ -382,7 +201,6 @@ comedy_btn.forEach((btn, i) => {
   });
 });
 }
-addComedy();
 
 function addShonen() {
 shonen_btn.forEach((btn, i) => {
@@ -400,7 +218,6 @@ shonen_btn.forEach((btn, i) => {
   });
 });
 }
-addShonen();
 
 function addDetective() {
 detective_btn.forEach((btn, i) => {
@@ -418,7 +235,6 @@ detective_btn.forEach((btn, i) => {
   });
 });
 }
-addDetective();
 
 function addFantastic() {
 fantastic_btn.forEach((btn, i) => {
@@ -436,6 +252,10 @@ fantastic_btn.forEach((btn, i) => {
   });
 });
 }
+addDrama();
+addComedy();
+addShonen();
+addDetective();
 addFantastic();
 
   
@@ -444,15 +264,17 @@ addFantastic();
 const filterCard = document.querySelectorAll('.wallpaper');
 
 
-document.querySelector('nav').addEventListener('click', e => {
-  let filterClass = e.target.dataset['f'];
-  console.log(filterClass);
-  filterCard.forEach( elem => {
-    if(!elem.classList.contains(filterClass)){
-      elem.classList.add('hide-filter');
-    }else{
-      elem.classList.remove('hide-filter');
-      e.classList.add('active');
-    }
+function filter(){
+  document.querySelector('nav').addEventListener('click', e => {
+    let filterClass = e.target.dataset['f'];
+    console.log(filterClass);
+    filterCard.forEach( elem => {
+      if(!elem.classList.contains(filterClass)){
+        elem.classList.add('hide-filter');
+      }else{
+        elem.classList.remove('hide-filter');
+      }
+    });
   });
-});
+}
+filter();
