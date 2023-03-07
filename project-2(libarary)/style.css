@@ -10,6 +10,12 @@
     height: auto;
     background-image:url('./img/background/main/Rectangle\ 69.jpg');
 }
+html,body{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    width: 0px;
+    height: 0px;
+}
 h1,h2,h3,h4,h5{
     margin: 0 0 0 0;
 }
@@ -51,11 +57,8 @@ ul,li{
     z-index: 50;
     background-color:var(--color5);
 }
-.list_head{
-    display: flex;
-    gap: 644px;
-    justify-content: center;
-    align-items: center;
+.btn_head{
+margin: auto;
 }
 .title_ganery{
     margin-left: 111px;
@@ -85,19 +88,42 @@ color: #FFFFFF;
 .block{
     overflow: auto;
     gap: 20px;
-    width: auto;
     display: flex;
     height: auto;
     min-height:271px;
-    margin-bottom: 50px;
     background-image:url('./img/background/main/1661429614_47-oir-mobi-p-fon-knizhnie-polki-instagram-54.jpg');
 }
 @media (max-width: 768px){
-    .block{
-        width: 500px;
+    .main{
+        width: 900px;
+        height: auto;
     }
-    .txt{
+    .container{
         margin-left: 0px;
+        margin-right: 0px;
+    }
+    .category{
+        width: 900px;
+    }
+    .genre{
+        width:900px;
+    }
+    .genre h1,h2{
+        font-size: 20px;
+    } 
+    .all{
+        margin-left: -170px;
+    }
+    .block{
+        width: 700px;
+    }
+    .container_anime{
+        width: 612px;
+        min-height: 472px;
+    }
+    .card img{ 
+        width: 271px;
+        height: 211px;
     }
 }
 .block h1{
@@ -107,18 +133,18 @@ color: #FFFFFF;
 }
 .anime_flex{
     display: flex;
-    gap: 131px;
+    gap: 71px;
+    flex-wrap: wrap;
+    max-width: 1200px;
     margin-bottom: 80px;
 }
 .flex{
     display:flex;
 }
 .plus{
-
-}
-.plus:hover,
-.plus:focus{
-    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 0 0 0 60px;
 }
 .title{
     width: 143px;
@@ -144,20 +170,13 @@ color: #FFFFFF;
 }
 
 .container_category{
-    width: 1104px;
+    width: auto;
     margin-top: 80px;
     min-height: 246px;
     margin-left: 54px;
     margin-right: 54px;
 }
-.txt_block_1{
-}
-.txt_block_2{
-}
-.txt_block_3{
-}
 .txt{
-    margin-left: 500px;
     margin-bottom:15px;
 }
 .anime{
@@ -166,7 +185,7 @@ color: #FFFFFF;
     background-color:var(--color5);
 }
 .container_anime{
-    width: 1076px;
+    max-width: 1077px;
     min-height: 472px;
     margin-left: 68px;
     margin-right: 68px;
@@ -180,8 +199,8 @@ color: #FFFFFF;
     background:var(--color5);
 }
 .list_genre{
-    width: 1062px;
-    height: 44px;
+    width: auto;
+    height: auto;
     margin-left:47px;
     margin-bottom:86px;
 }
@@ -196,15 +215,12 @@ color: #FFFFFF;
     gap:70px;
     margin-left: 20px;
 }
-.list h2{
-    
+.genre-btn{ 
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 34px;
     line-height: 44px;
-    /* identical to box height */
-
     color: var(--color2);
 }
 .burger{
@@ -308,8 +324,6 @@ height: 39px;
     }
 }
 nav{
-    display: inline-block;
-    padding: 10px 40px 10px 0;
     cursor: pointer;
 }
 .active_btn{

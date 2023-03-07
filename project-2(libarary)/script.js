@@ -86,7 +86,7 @@ addReading();
             </div>
         </div>
             `;
-         const anime = document.querySelector('.container_anime');
+         const anime = document.querySelector('.anime_flex');
          anime.append(newDiv);
          addRead();
          addScheduled();

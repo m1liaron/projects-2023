@@ -95,12 +95,8 @@ ul,li{
 .show{
   display: block;
 }
-.anime_flex{
+.list{
   display: flex;
-  width: 900px;
-  height: 401px;
-  gap: 20px; /* set a fixed height value or 'auto' */
-  margin-bottom: 200px;
 }
 .element {
   display: flex;
@@ -119,4 +115,19 @@ ul,li{
   background-color: red;
   margin-left: 10px;
   border-radius: 50%;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  gap: 100px;
+}
+
+.wallpaper {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 120px;
 }
