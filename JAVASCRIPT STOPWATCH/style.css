@@ -1,0 +1,54 @@
+html,body{
+    background: rgb(64, 166, 254);
+}
+ul,li{
+    margin: 0 0 0 0;
+    list-style: none;
+    height: auto;
+}
+h1,h2{
+width: 420px;
+margin: auto;
+color: #fff;
+font-weight: 100;
+margin-bottom: 20px;
+}
+.StopWatch {
+    width: 550px;
+    height: 200px;
+    background: rgb(179, 171, 85);
+    margin: auto;
+}
+ .time {
+    margin: auto;
+    width: 70px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.btn_container{
+    width: 400px;
+    margin-left: 80px;
+    margin-right: 80px;
+} 
+.btn {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 25px;
+    margin-right: 30px;
+}
+.btn:hover {
+    width: 100px;
+    height: 200px;
+    background: rgb(206, 196, 94);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.Start {
+}
+.Stop {
+}
+.Reset {
+}
