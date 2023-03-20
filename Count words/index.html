@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Words</title>
+</head>
+<body>
+    <body>
+        <form>
+          <textarea id="input-text" rows="5" cols="50"></textarea><br>
+          <button class="btn" type="button" onclick="countWords()">Count Words</button>
+        </form>
+        
+        <p>Word count: <span id="word-count"></span></p>
+        
+        <style>
+            textarea:valid{
+                border:0; 
+                padding:10px; 
+                font-size:1.3em; 
+                font-family:"Ubuntu Light","Ubuntu","Ubuntu Mono","Segoe Print","Segoe UI";
+                color: rgb(134, 188, 95);
+                border:solid 1px #ccc; 
+                margin:0 0 20px; 
+                width:300px;
+                -moz-box-shadow: inset 0 0 4px rgba(0,0,0,0.2); 
+                -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2); 
+                box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+                -webkit-border-radius: 3px; 
+                -moz-border-radius: 3px; 
+                border-radius: 3px;  
+                width: auto;
+                height: auto;  
+            }
+            textarea:focus { 
+            outline: none !important;
+            border-color: #719ECE;
+            box-shadow: 0 0 10px #719ECE;
+            }
+            p{
+                font-size: 50px;
+                color: rgb(178, 255, 123);
+            }
+            body{
+                background-color:rgb(242, 0, 255);
+            }
+            .btn{
+                width: 120px;
+                height: 60px;
+                border: none;
+                border-radius: 20px;
+                background-color: rgb(178, 255, 123);
+            }
+            .btn:hover{
+                border: none;
+                border-radius: 20px;
+                background-color: rgb(228, 214, 196);
+                cursor: pointer;
+            }
+        </style>
+        <script> 
+            function countWords() {
+            // get the input text from the textarea
+            const input = document.getElementById("input-text").value;
+            
+            // remove leading/trailing white space
+            const trimmedInput = input.trim();
+            
+            // split the input string into an array of words
+            const words = trimmedInput.split(/\s+/);
+            
+            // get the word count and display it on the page
+            const wordCount = words.length;
+            document.getElementById("word-count").textContent = wordCount;
+        }
+        </script>
+      </body>
+</body>
+</html>
