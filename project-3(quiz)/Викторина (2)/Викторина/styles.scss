@@ -1,0 +1,37 @@
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.quiz{
+ margin: 0 auto;
+ width: 600px;    
+}
+#id{
+
+
+}
+.quiz-questions{}
+
+.quiz-questions-item{
+    &__question {
+        margin-bottom: 20px;
+         
+    }
+    &__answers {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+
+.quiz-qustions-item__question{
+    margin-bottom: 20px;
+}
+.quiz-qustions-item__answers{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
