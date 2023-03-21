@@ -30,17 +30,17 @@
     
     reset.addEventListener('click', resetTimer);
     
-    function stopTimer(e) {
+    function stopTimer() {
         clearInterval(Interval);
     }
-    function resetTimer(e) {
+    function resetTimer() {
         clearInterval(Interval);
         tens = '00';
         seconds = '00';
         appendTens.innerHTML = tens;
         appendSeconds.innerHTML = seconds;
     }
-    function startTimer(e) {
+    function startTimer() {
         tens++;
         
         if(tens <= 9){
@@ -65,6 +65,9 @@
             appendTens.innerHTML = '0';
             appendSeconds.innerHTML = '00';
             appendMinutes.innerHTML = '0' + minutes;
+        }
+        if(minutes >= 10){
+            appendMinutes.innerHTML = minutes;
         }
     }
 

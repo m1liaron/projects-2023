@@ -1,0 +1,21 @@
+html, body{
+    background: antiquewhite;
+}
+ul,li{
+    list-style: none;
+    margin: 0 0 0 0;
+}
+h1{
+    margin: auto;
+}
+.container{
+    width: 173px;
+    height: 30px;
+    background: rgb(229, 215, 197);
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
