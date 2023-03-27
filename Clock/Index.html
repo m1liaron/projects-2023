@@ -8,8 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    <header>
+        <h1 class="return-time" id="return-time">Return your time zone</h1>
+        <div class="header__burger" id="burger"><span></span></div>
+    </header>
     
-
+    <!-- <div class="countries" id="countries-time">
+        <img width="50px" id="Italy" src="Img/Flag_of_Italy.jpg" alt="">
+    </div> -->
+    <div class="countries"  id="countries-time">
+        <div id="Italy" class="flag">
+            <section role="region" aria-hidden="true" class="italy-flag">
+            </section>
+          </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

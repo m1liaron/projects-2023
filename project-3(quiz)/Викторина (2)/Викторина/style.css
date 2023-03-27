@@ -1,9 +1,14 @@
-
+:root{
+    --color1: rgb(236, 175, 175);;
+}
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    background:rgb(255, 234, 223);
 }
-
+.answer-input{
+    background-color:red;
+}
 .quiz{
  margin: 0 auto;
  width: 600px;    
@@ -14,6 +19,7 @@ body {
 .quiz-indicator,
 .quiz-results{
     margin-bottom: 20px;
+    color:var(--color1)
 }
 
 
@@ -47,6 +53,11 @@ body {
     {
     display: none;
 }
+.btn{
+    border: none;
+    border-radius: 5px;
+    background:var(--color1)
+}
 
 .questions--hidden, 
 .indicator--hidden,
@@ -63,4 +74,7 @@ body {
 }
 .answer--valid{
     color:green;
+}
+.quiz-indecator{
+    color: var(--color1)
 }
