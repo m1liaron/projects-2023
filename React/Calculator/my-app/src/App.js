@@ -62,22 +62,19 @@ onAdd = (e) => {
       <div className="App">
       <header className="App-header">
         <h1>Calculator</h1>
-        <input 
-        type="text" 
-        id="display" 
-        value={number}
-        onChange={this.onValueChange}/>
-        <div>
+        <input type="text" id="display" value={number}onChange={this.onValueChange}/>
+      <div className="container">
+      <div>
             <input type="button" id="display" value="7"onClick={() => this.btnClick('7')}/>
             <input type="button" id="display" value="8"onClick={() => this.btnClick('8')}/>
             <input type="button" id="display" value="9"onClick={() => this.btnClick('9')}/>
             <input type="button" id="display" value="/"onClick={() => this.btnClick('/')}/>  
         </div>       
         <div>
-                  <input type="button" id="display" value="4"onClick={() => this.btnClick('4')}/>
-                  <input type="button" id="display" value="5"onClick={() => this.btnClick('5')}/>
-                  <input type="button" id="display" value="6"onClick={() => this.btnClick('6')}/>
-                  <input type="button" id="display" value="*"onClick={() => this.btnClick('*')}/>
+            <input type="button" id="display" value="4"onClick={() => this.btnClick('4')}/>
+            <input type="button" id="display" value="5"onClick={() => this.btnClick('5')}/>
+            <input type="button" id="display" value="6"onClick={() => this.btnClick('6')}/>
+            <input type="button" id="display" value="*"onClick={() => this.btnClick('*')}/>
         </div>
         <div>
           <input type="button" id="display" value="1"onClick={() => this.btnClick('1')}/>
@@ -95,6 +92,7 @@ onAdd = (e) => {
         <div>
         <input type="button" id="display" value="√" onClick={() => this.sqrt('√')}/>
         </div>
+      </div>
       </header>
     
     </div>

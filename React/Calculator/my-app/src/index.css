@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 code {
@@ -27,7 +26,14 @@ input[type="text"] {
   height: 50px;
   font-size: 24px;
   text-align: right;
-  border-radius: 5px;
-  border: 1px solid black;
+  background-color: #272a33;
+  color:white;
+  border:none;
   padding: 5px;
+}
+.container{
+  width: 260px;
+  background-color: #383e4b;
+  border-right:1px solid #23272f;
+  border-left:1px solid #383e4b;
 }
