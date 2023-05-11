@@ -59,7 +59,7 @@ addReading();
                     <div class="container_btn">
                     <button class="btn btn-add-reading">Смотрю</button>
                     <button class="btn btn-add-read">Просмотренно</button>
-                    <button class="btn burger" id="button0">...</button>
+                    <button class="btn burger" id="button0" onClick=${addCategories()}>...</button>
                 </div>
             </div>
             </div>
@@ -69,11 +69,11 @@ addReading();
                   <button class="btn_category btn-add-scheduled">Заплановано</button>
                   <button class="btn_category">Відкладено</button>
                   <button class="btn_category">Покинуто</button>
-                  <button class="btn_category btn_add_genre" id="button0" >Додати у....</button>
+                  <button class="btn_category btn_add_genre" id="button0" onClick=${addCategories()} >Додати у....</button>
                 </li>
               </ul>
             </div>
-            <div class="container_btns_genre ">
+            <div class="container_btns_genre">
               <ul>
                 <li>
                   <button class="btn_genre drama">Драму</button>
